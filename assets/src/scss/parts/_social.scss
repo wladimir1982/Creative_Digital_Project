@@ -1,0 +1,38 @@
+.social{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 7% 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: #9f9acf;
+  @include breakpoint(xs){
+    flex-wrap: nowrap;
+  }
+  &__item{
+    margin-right: 3%;
+    width: rem-calc(32);
+    height: rem-calc(32);
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    transition: all .3s ease;
+    background-color: $white-color;
+  }
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+  &__link{
+    line-height: rem-calc(13);
+    color: #9f9acf;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__link:hover{
+    color: $black-color;
+  }
+}

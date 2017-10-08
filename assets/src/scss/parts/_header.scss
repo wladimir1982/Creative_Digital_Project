@@ -1,0 +1,14 @@
+.header {
+  height: 100vh;
+  padding-top: rem-calc(43);
+  @include bg-img('img/1bg.png');
+&__content {
+  margin: 0 auto;
+  &-title {
+@include for-title-header;
+  }
+  &-subtitle {
+@include for-subtitle-header;
+  }
+}
+}

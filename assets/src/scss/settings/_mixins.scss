@@ -1,0 +1,129 @@
+@mixin flat-btn($bg-color) {
+  display: block;
+  min-width: 200px;
+  height: 55px;
+  font-family: $main-font-family;
+  font-size: 20px;
+  line-height: 55px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $white-color;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all .3s ease;
+  text-align: center;
+  background-color: $bg-color;
+  text-decoration: none;
+  &:hover {
+    background-color: darken($bg-color, 15%);
+  }
+}
+@mixin for-menu-header {
+  color: #ffffff;
+  font-family: $main-font-family;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@mixin for-title-header {
+  color: #fefefb;
+  font-family: $main-font-family;
+  font-size: 72px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  @include breakpoint(tb) {
+     font-size: 50px;
+   }
+  @media screen and (min-width: 638px) {
+  font-size: 50px;
+}
+  @include breakpoint(xs) {
+    font-size: 35px;
+  }
+}
+@mixin for-subtitle-header {
+  color: #fefdfd;
+  font-family: $title-font-family;
+  font-size: 30px;
+  text-align: center;
+  font-style: italic;
+  @include breakpoint(tb) {
+    font-size: 25px;
+  }
+  @include breakpoint(xs) {
+    font-size: 22px;
+  }
+}
+
+@mixin flexibox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@mixin for-foto {
+  color: #fefbfc;
+  font-family: $main-font-family;
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+//Foundation Breakpoints
+@mixin breakpoint($point) {
+  /* Small only */
+  @if $point == xs {
+    @media screen and (max-width: 39.9375em) {
+      @content;
+    }
+  }
+    /* Medium and up */
+  @else if $point == sm {
+    @media screen and (min-width: 40em) {
+      @content;
+    }
+  }
+    /* Medium only */
+  @else if $point == tb {
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      @content;
+    }
+  }
+    /* Large and up */
+  @else if $point == md {
+    @media screen and (min-width: 64em) {
+      @content;
+    }
+  }
+    /* Large only */
+  @else if $point == desktop {
+    @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+      @content;
+    }
+  }
+}
+
+//Browsers prefixes
+@mixin crossBrowser($property, $val) {
+  -webkit-#{$property}: $val;
+  -moz-#{$property}: $val;
+  -ms-#{$property}: $val;
+  #{$property}: $val;
+}
+
+//Background image
+@mixin bg-img($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin flex-col() {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-flow: wrap;
+}
+
+
+
+

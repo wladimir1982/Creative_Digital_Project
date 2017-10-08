@@ -1,0 +1,49 @@
+.footer {
+  background: $color_6;
+  .row {
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row;
+  }
+  &__box {
+    @include flexibox;
+    justify-content: center;
+    align-items: center;
+    &-copyrite {
+      @include flex-grid-column(9);
+      color: $white-color;
+      padding-left: rem-calc(30);
+      font-family: $title-font-family;
+      font-size: 18px;
+      @include breakpoint (tb) {
+        @include flex-grid-column(12);
+        text-align: center;
+        padding-top: rem-calc(30);
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+      @include breakpoint (xs) {
+        @include flex-grid-column(12);
+        text-align: center;
+        padding-top: rem-calc(30);
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+    }
+    &-year {
+      letter-spacing: 0.36px;
+    }
+    &-bold {
+      font-weight: 700;
+      letter-spacing: 0.36px;
+    }
+  }
+  .social {
+    @include flex-grid-column(3);
+    @include breakpoint (tb) {
+      @include flex-grid-column(12);
+    }
+    @include breakpoint (xs) {
+      @include flex-grid-column(12);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:300,400,500,600,700,800,900');
+
+
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova:300,400,600,700,900');
+/*Global Variables*/
+$main-font-family: 'Proxima Nova', sans-serif;
+$title-font-family: 'PT Sans', sans-serif;
+
+
+$main-font-size: 17px;
+/*Menu*/
+$menu-font-size: 16px;
+
+body {
+  font-family: $main-font-family;
+  font-size: $main-font-size;
+}
+h1, p {
+  margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color_2;
+  font-family: $title-font-family;
+}

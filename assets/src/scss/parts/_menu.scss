@@ -1,0 +1,79 @@
+
+.no-js .top-bar {
+  display: none;
+}
+[data-responsive-toggle] {
+  @include breakpoint(sm) {
+    display: none;
+  }
+}
+.responsive-menu {
+  @include breakpoint(xs) {
+    display: none;
+  }
+}
+.menu-icon--open {
+    transform: none;
+}
+
+.top-bar {
+  margin-bottom: rem-calc(130);
+  @include breakpoint(tb) {
+    margin-bottom: rem-calc(80);
+  }
+  @include breakpoint(xs) {
+    margin-bottom: rem-calc(50);
+  }
+}
+.top-bar,
+.top-bar ul{
+  background: none;
+}
+.top-bar ul {
+  @include breakpoint(xs) {
+    //background: rgba(123, 238, 199, 1);
+    //background: rgba(176, 48, 96, .7);
+    background: rgba(147, 112, 219, .7);
+  }
+}
+
+.main-menu {
+  @include breakpoint(xs) {
+    width: 90%;
+    position: absolute;
+    color: brown;
+  }
+  a {
+    @include for-menu-header;
+
+    @include breakpoint(tb) {
+    font-size: 19px;
+  }
+    @include breakpoint(xs) {
+      text-align: center;
+      font-size: 16px;
+    }
+    &:hover {
+      background-color: $color_3;
+      border-radius: 15px;
+    }
+  }
+}
+
+.menu-icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 16px;
+  cursor: pointer;
+}
+
+//.no-js .title-bar {
+//  display: none;
+//}
+//.responsive-menu {
+//  @include breakpoint(medium down) {
+//    display: none;
+//  }
+//}

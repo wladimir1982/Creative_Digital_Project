@@ -1,0 +1,152 @@
+.servises {
+  background: #ebebeb;
+  .row {
+    .galery {
+      @include flexibox;
+      &__left {
+        @include flex-grid-column(8);
+        @include flexibox;
+
+        @include breakpoint (tb) {
+          @include flex-grid-column(12);
+          @include flexibox;
+        }
+
+        @media screen and (max-width: 640px) {
+          @include flex-grid-column(12);
+        }
+
+        @include breakpoint (xs) {
+          @include flex-grid-column(12);
+          @include flexibox;
+          //justify-content: center;
+          //align-items: center;
+        }
+        &-box {
+          text-align: center;
+          @include breakpoint (xs) {
+            text-align: center;
+          }
+          h3 {
+            color: #665f60;
+            font-family: $title-font-family;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+          p {
+            width: 95%;
+            margin: 0 auto;
+            font-family: $title-font-family;
+            font-size: 18px;
+            font-style: italic;
+            @include breakpoint (tb) {
+              font-size: 18px;
+            }
+            @include breakpoint (xs) {
+              font-size: 16px;
+            }
+          }
+        }
+        &-one {
+          width: 50%;
+          height: rem-calc(400);
+          @include flexibox;
+          justify-content: center;
+          align-items: center;
+          background: #dbdbdb;
+          @include breakpoint (xs) {
+            width: 100%;
+            @include flex-grid-column(12);
+            @include flexibox;
+          }
+        }
+        &-two {
+          width: 50%;
+          height: rem-calc(400);
+          @include flexibox;
+          justify-content: center;
+          align-items: center;
+          @include breakpoint (xs) {
+            width: 100%;
+            @include flex-grid-column(12);
+            @include flexibox;
+          }
+        }
+        &-three {
+          width: 50%;
+          height: rem-calc(400);
+          @include flexibox;
+          justify-content: center;
+          align-items: center;
+          @include breakpoint (xs) {
+            width: 100%;
+            background: #dbdbdb;
+            @include flex-grid-column(12);
+            @include flexibox;
+          }
+        }
+        &-four {
+          width: 50%;
+          height: rem-calc(400);
+          @include flexibox;
+          justify-content: center;
+          align-items: center;
+          background: #dbdbdb;
+          @include breakpoint (xs) {
+            width: 100%;
+            background: #ebebeb;
+            @include flex-grid-column(12);
+            @include flexibox;
+          }
+        }
+      }
+      &__right {
+        @include flex-grid-column(4);
+        @include bg-img('img/about.png');
+        width: 30%;
+        height: rem-calc(800);
+        @include flexibox;
+        //justify-content: center;
+        @include breakpoint (tb) {
+          @include flex-grid-column(12);
+          @include flexibox;
+          justify-content: center;
+        }
+
+        @media screen and (max-width: 640px) {
+          @include flex-grid-column(12);
+        }
+
+        @include breakpoint (xs) {
+          @include flex-grid-column(12);
+        }
+        &-box {
+          text-align: center;
+          img {
+            padding: 115px 0 32px;
+          }
+          h3 {
+            @include for-foto;
+          }
+          p {
+            width: 90%;
+            margin: 0 auto;
+            color: #fefcfd;
+            font-family: $title-font-family;
+            font-size: 18px;
+            font-style: italic;
+            @include breakpoint (tb) {
+              font-size: 16px;
+            }
+            @include breakpoint (xs) {
+              font-size: 16px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+

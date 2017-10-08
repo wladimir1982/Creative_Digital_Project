@@ -1,0 +1,92 @@
+.imgtextbtn {
+  padding-top: rem-calc(124);
+  padding-bottom: rem-calc(124);
+  background: #ebebeb;
+  @include breakpoint (xs) {
+    padding-top: rem-calc(80);
+    padding-bottom: rem-calc(80);
+  }
+  &__wrap {
+    @include flexibox;
+    justify-content: center;
+    align-items: center;
+    &-box {
+      text-align: center;
+      //@include flexibox;
+      //justify-content: center;
+      img {
+        padding: 75px 0 44px;
+      }
+      p {
+        @include for-foto;
+      }
+
+    }
+    &-img {
+      @include bg-img('img/mob.png');
+      width: rem-calc(380);
+      height: rem-calc(555);
+      @include flexibox;
+      justify-content: center;
+      @include flex-grid-column(5);
+      @include breakpoint (tb) {
+        @include flex-grid-column(12);
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      @include breakpoint (xs) {
+        @include flex-grid-column(12);
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    }
+
+    &-text {
+      @include flexibox;
+      justify-content: center;
+      @include flex-grid-column(7);
+      @include breakpoint (xs) {
+        @include flex-grid-column(12);
+      }
+      margin: 0 auto;
+      p {
+        width: 90%;
+        color: $color_4;
+        font-family: $title-font-family;
+        font-size: 20px;
+        @include breakpoint (tb) {
+          @include flex-grid-column(12);
+          font-size: 16px;
+        }
+        @media screen and (min-width: 638px) {
+          font-size: 16px;
+        }
+        @include breakpoint (xs) {
+          font-size: 14px;
+        }
+      }
+      button {
+        padding: 15px 50px;
+        color: #7d7a7c;
+        font-family: $title-font-family;
+        font-size: 20px;
+        font-style: italic;
+        border: 1px solid #9d9d9d;
+        cursor: pointer;
+        margin: 0 auto;
+        transition: background .3s;
+        @include breakpoint (tb) {
+          padding: 13px 40px;
+          font-size: 16px;
+        }
+        @include breakpoint (xs) {
+          padding: 10px 25px;
+          font-size: 14px;
+        }
+      }
+      button:hover {
+        background: #b2abc7;
+      }
+    }
+  }
+}

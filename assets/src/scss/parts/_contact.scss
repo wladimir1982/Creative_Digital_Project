@@ -1,0 +1,232 @@
+.contactus {
+  .row {
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row;
+    justify-content: center;
+  }
+
+  margin: 0 auto;
+  height: 900px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #9f9acf;
+  text-align: center;
+
+  .map {
+    margin: 0 auto;
+    height: 900px;
+    width: 100%;
+    opacity: .5;
+    z-index: 2;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .contactus__icon {
+    width: 42px;
+    margin-top: 60px;
+  }
+  .contactus__title {
+    /* Style for "GET IN TOU" */
+    color: #ffffff;
+    font-family: $main-font-family;
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .contact__form {
+    //max-width: 860px;
+    @include flex-grid-column(12);
+    width: 75%;
+    height: 410px;
+    position: absolute;
+    z-index: 2;
+    top: 370px;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+  }
+  .contact__form-info {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .contact__form-info input {
+    font-family: $main-font-family;
+    font-style: italic;
+    opacity: 0.6;
+    width: 48%;
+    height: 45px;
+    border: none;
+    padding-left: 6%;
+    border-radius: 4px;
+    outline: none;
+  }
+  .contact__form-info input:focus {
+    opacity: 1;
+    transition: all 0.2s;
+  }
+  .contact__form textarea {
+    margin-top: 25px;
+    font-family: $main-font-family;
+    font-style: italic;
+    opacity: 0.6;
+    width: 100%;
+    //height: 200px;
+    height: 50%;
+    padding-top: 15px;
+    border: none;
+    padding-left: 25px;
+    border-radius: 4px;
+    outline: none;
+  }
+  .contact__form textarea:focus {
+    opacity: 1;
+    transition: all 0.2s;
+  }
+  .contact__form-btn {
+    display: block;
+    //width: 300px;
+    //height: 75px;
+    padding: 25px 65px;
+    background-color: #9f9acf;
+    border-bottom: 4px solid #8783b0;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-top: 4px solid transparent;
+    margin: 50px auto 0 auto;
+    border-radius: 4px;
+    font-family: $main-font-family;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    @include breakpoint (xs) {
+      padding: 15px 30px;
+      font-size: 18px;
+    }
+  }
+  .contact__form-btn:hover {
+    text-decoration: none;
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    border: 4px solid #8783b0;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .contact__address {
+    position: absolute;
+    right: 0;
+    top: 210px;
+    z-index: 2;
+    width: 350px;
+    height: 95px;
+    background-color: #fff;
+    -webkit-transform: translateX(260px);
+    -ms-transform: translateX(260px);
+    transform: translateX(260px);
+    transition: -webkit-transform 0.1s ease-in;
+    transition: transform 0.1s ease-in;
+    transition: transform 0.1s ease-in, -webkit-transform 0.1s ease-in;
+  }
+  .contact__address--icon {
+    width: 90px;
+    display: inline-block;
+    height: 100%;
+    background-color: #9f9acf;
+    vertical-align: top;
+    padding-top: 25px;
+  }
+  .contact__address--info {
+    width: 255px;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    padding-top: 12px;
+  }
+  .contact__address--info p {
+    font-family: $main-font-family;
+  }
+  .contact__address:hover {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    transition: transform 0.7s, -webkit-transform 0.7s;
+  }
+
+  .contact__tel {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    width: 350px;
+    height: 95px;
+    background-color: #fff;
+    -webkit-transform: translateX(260px);
+    -ms-transform: translateX(260px);
+    transform: translateX(260px);
+    transition: -webkit-transform 0.1s ease-in;
+    transition: transform 0.1s ease-in;
+    transition: transform 0.1s ease-in, -webkit-transform 0.1s ease-in;
+    top: 305px;
+  }
+  .contact__tel--icon {
+    padding-top: 30px;
+    width: 90px;
+    display: inline-block;
+    height: 100%;
+    background-color: #9f9acf;
+    vertical-align: top;
+  }
+  .contact__tel--info {
+    width: 255px;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    padding-top: 35px;
+  }
+  .contact__tel p {
+    font-family: $main-font-family;
+  }
+  .contact__tel:hover {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    transition: transform 0.7s, -webkit-transform 0.7s;
+  }
+
+  .contact__button-top {
+    position: absolute;
+    right: 10%;
+    bottom: 65px;
+    z-index: 2;
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+    background-color: rgba(159, 154, 207, 0.5);
+    padding-top: 30px;
+  }
+  .contact__button-top:hover {
+    bottom: 75px;
+    transition: all 0.7s;
+  }
+  .contact__button-top img {
+    width: 36px;
+    height: 21px;
+    color: #e6e6e6;
+  }
+}

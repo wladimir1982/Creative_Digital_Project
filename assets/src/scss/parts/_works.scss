@@ -1,0 +1,70 @@
+.works {
+  @include bg-img('img/works-bg.png');
+  .row {
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row;
+    justify-content: center;
+  }
+
+&__inform {
+  @include flex-grid-column(12);
+  padding-top: rem-calc(50);
+  padding-bottom: rem-calc(70);
+  text-align: center;
+  @include breakpoint (xs) {
+    padding-bottom: rem-calc(50);
+  }
+  &-img {
+    margin-bottom: rem-calc(35);
+  }
+  &-title {
+    color: #fefcfd;
+    font-family: $main-font-family;
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include breakpoint (xs) {
+      margin: 0;
+      font-size: 25px;
+    }
+  }
+}
+
+&__slider {
+  @include flex-grid-column(9);
+  margin: 0 auto;
+  &-info {
+    width: rem-calc(225);
+  }
+  &-img {
+    width: 100%;
+  }
+}
+
+&__button {
+  @include flex-grid-column(12);
+  padding-top: rem-calc(45);
+  padding-bottom: rem-calc(45);
+  text-align: center;
+  &-btn {
+    color: $white-color;
+    font-family: $title-font-family;
+    font-size: 20px;
+    font-style: italic;
+    border: 1px solid #9d9d9d;
+    padding: 15px 45px;
+    transition: .3s linear;
+    @include breakpoint (tb) {
+      padding: 13px 40px;
+      font-size: 16px;
+    }
+    @include breakpoint (xs) {
+      padding: 10px 25px;
+      font-size: 14px;
+    }
+  }
+  &-btn:hover {
+    background: #5c719a;
+  }
+  }
+}

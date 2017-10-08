@@ -1,0 +1,98 @@
+//Toggle Menu
+.menu-icon {
+  position: relative;
+  display: block;
+  height: 15px;
+  width: rem-calc(31);
+  cursor: pointer;
+  transition: all 0.3s;
+  &__line {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 31px;
+    height: 2px;
+    background-color: $color_1;
+    border-radius: 3px;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $color_1;
+      border-radius: 3px;
+      transition: all 0.3s;
+    }
+    &:before {
+      transform: translateY(-5px);
+    }
+    &:after {
+      transform: translateY(5px);
+    }
+  }
+  &--open {
+    transform: translateX(-300px) rotate(45deg);
+    @include breakpoint(xs) {
+      transform: translateX(-250px) rotate(45deg);
+    }
+    span {
+      &:before,
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  perspective: 800px;
+  &__item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: .4s ease;
+    transition-property: transform, background-color;
+    color: white;
+    &--front {
+      background-color: green;
+      backface-visibility: hidden;
+    }
+    &--back {
+      background-color: grey;
+      transform: rotateY(-180deg) translateZ(0);
+      backface-visibility: hidden;
+    }
+  }
+  &:hover {
+    .front {
+      transform: rotateY(-180deg);
+    }
+    .back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  &_block {
+    border: 1px solid black;
+    padding: 15px;
+    flex: 0 1 50%;
+    max-width: 50%;
+    &-wide {
+      flex: 0 1 100%;
+      max-width: 100%;
+    }
+  }
+}

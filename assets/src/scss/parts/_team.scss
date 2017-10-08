@@ -1,0 +1,66 @@
+.team {
+  background: $color_5;
+  .row {
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row;
+    justify-content: center;
+  }
+  &__inform {
+    @include flex-grid-column(12);
+    text-align: center;
+    padding-top: rem-calc(50);
+    padding-bottom: rem-calc(68);
+
+    &-title {
+      color: #665f60;
+      font-family: $main-font-family;
+      font-size: 36px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+  &__slider {
+    .slick-dots {
+      position: absolute;
+      bottom: 35px;
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+    }
+    //@include flex-grid-column(12);
+    padding-bottom: rem-calc(100);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    &-content {
+      @include flex-grid-column(12);
+      @include flexibox;
+      padding: rem-calc(10);
+      margin-right: rem-calc(10);
+      background-color: $white-color;
+    }
+    &-content:last-child {
+      margin-right: 0;
+    }
+    &-image {
+      padding-bottom: rem-calc(34);
+    }
+    &-title {
+      color: #9f9acf;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    &-subtitle {
+      color: $black-color;
+      font-size: 24px;
+    }
+  }
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+}
