@@ -31,8 +31,6 @@
 }
 .top-bar ul {
   @include breakpoint(xs) {
-    //background: rgba(123, 238, 199, 1);
-    //background: rgba(176, 48, 96, .7);
     background: rgba(147, 112, 219, .7);
   }
 }
@@ -69,11 +67,13 @@
   cursor: pointer;
 }
 
-//.no-js .title-bar {
-//  display: none;
-//}
-//.responsive-menu {
-//  @include breakpoint(medium down) {
-//    display: none;
-//  }
-//}
+
+.sheensay_fixed {
+  padding-left: 15px;
+  border-radius: 5px;
+  width: 81.5%;
+  position: fixed !important;
+  top: 0 !important;
+  background: rgba(159, 154, 207, 0.5);
+  z-index: 100;
+}
