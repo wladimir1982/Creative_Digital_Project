@@ -2,18 +2,21 @@
 .no-js .top-bar {
   display: none;
 }
+
 [data-responsive-toggle] {
   @include breakpoint(sm) {
     display: none;
   }
 }
+
 .responsive-menu {
   @include breakpoint(xs) {
     display: none;
   }
 }
+
 .menu-icon--open {
-    transform: none;
+  transform: none;
 }
 
 .top-bar {
@@ -25,10 +28,12 @@
     margin-bottom: rem-calc(50);
   }
 }
+
 .top-bar,
-.top-bar ul{
+.top-bar ul {
   background: none;
 }
+
 .top-bar ul {
   @include breakpoint(xs) {
     background: rgba(147, 112, 219, .7);
@@ -43,10 +48,10 @@
   }
   a {
     @include for-menu-header;
-
     @include breakpoint(tb) {
-    font-size: 19px;
-  }
+      font-size: 19px;
+      transition: background .3s;
+    }
     @include breakpoint(xs) {
       text-align: center;
       font-size: 16px;
@@ -66,7 +71,6 @@
   height: 16px;
   cursor: pointer;
 }
-
 
 .sheensay_fixed {
   padding-left: 15px;
